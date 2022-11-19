@@ -1,197 +1,87 @@
-<p align="center">
-    <img src="/docs/logo-text-padding.png" alt="GreptimeDB Logo" width="400px"></img>
-</p>
+# Frontend Mentor - QR code component
 
-<h3 align="center">
-    The next-generation hybrid timeseries/analytics processing database in the cloud
-</h3>
+![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)
 
-<p align="center">
-    <a href="https://codecov.io/gh/GrepTimeTeam/greptimedb"><img src="https://codecov.io/gh/GrepTimeTeam/greptimedb/branch/develop/graph/badge.svg?token=FITFDI3J3C"></img></a>
-    &nbsp;
-    <a href="https://github.com/GreptimeTeam/greptimedb/actions/workflows/develop.yml"><img src="https://github.com/GreptimeTeam/greptimedb/actions/workflows/develop.yml/badge.svg" alt="CI"></img></a>
-    &nbsp;
-    <a href="https://github.com/greptimeTeam/greptimedb/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/greptimeTeam/greptimedb"></a>
-</p>
+## Welcome! 👋
 
-<p align="center">
-    <a href="https://twitter.com/greptime"><img src="https://img.shields.io/badge/twitter-follow_us-1d9bf0.svg"></a>
-    &nbsp;
-    <a href="https://www.linkedin.com/company/greptime/"><img src="https://img.shields.io/badge/linkedin-connect_with_us-0a66c2.svg"></a>
-</p>
+Thanks for checking out this front-end coding challenge.
 
-## What is GreptimeDB
+[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-GreptimeDB is an open-source time-series database with a special focus on
-scalability, analytical capabilities and efficiency. It's designed to work on
-infrastructure of the cloud era, and users benefit from its elasticity and commodity
-storage.
+**To do this challenge, you need a basic understanding of HTML and CSS.**
 
-Our core developers have been building time-series data platform
-for years. Based on their best-practices, GreptimeDB is born to give you:
+## The challenge
 
-- A standalone binary that scales to highly-available distributed cluster, providing a transparent experience for cluster users
-- Optimized columnar layout for handling time-series data; compacted, compressed, stored on various storage backends
-- Flexible index options, tackling high cardinality issues down
-- Distributed, parallel query execution, leveraging elastic computing resource
-- Native SQL, and Python scripting for advanced analytical scenarios
-- Widely adopted database protocols and APIs
-- Extensible table engine architecture for extensive workloads
+Your challenge is to build out this QR code component and get it looking as close to the design as possible.
 
-## Quick Start
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-### Build
+Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
-#### Build from Source
+## Where to find everything
 
-To compile GreptimeDB from source, you'll need:
+Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-- C/C++ Toolchain: provides basic tools for compiling and linking. This is
-  available as `build-essential` on ubuntu and similar name on other platforms.
-- Rust: the easiest way to install Rust is to use
-  [`rustup`](https://rustup.rs/), which will check our `rust-toolchain` file and
-  install correct Rust version for you.
-- Protobuf: `protoc` is required for compiling `.proto` files. `protobuf` is
-  available from major package manager on macos and linux distributions. You can
-  find an installation instructions [here](https://grpc.io/docs/protoc-installation/).
-  **Note that `protoc` version needs to be >= 3.15** because we have used the `optional`
-  keyword. You can check it with `protoc --version`.
-  
+The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
 
-#### Build with Docker
+If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
 
-A docker image with necessary dependencies is provided:
+You will find all the required assets in the `/images` folder. The assets are already optimized.
 
-```
-docker build --network host -f docker/Dockerfile -t greptimedb .
-```
+There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-### Run
+## Building your project
 
-Start GreptimeDB from source code, in standalone mode:
+Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-```
-cargo run -- standalone start
-```
+1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
+2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
+3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
+4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
 
-Or if you built from docker:
+## Deploying your project
 
-```
-docker run -p 4002:4002 -v "$(pwd):/tmp/greptimedb" greptime/greptimedb standalone start
-```
+As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
 
-For more startup options, greptimedb's **distributed mode** and information
-about Kubernetes deployment, check our [docs](https://docs.greptime.com/).
+- [GitHub Pages](https://pages.github.com/)
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
 
-### Connect
+You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-1. Connect to GreptimeDB via standard [MySQL
-   client](https://dev.mysql.com/downloads/mysql/):
+## Create a custom `README.md`
 
-   ```
-   # The standalone instance listen on port 4002 by default.
-   mysql -h 127.0.0.1 -P 4002
-   ```
+We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
 
-2. Create table:
+The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
 
-   ```SQL
-   CREATE TABLE monitor (
-     host STRING,
-     ts TIMESTAMP,
-     cpu DOUBLE DEFAULT 0,
-     memory DOUBLE,
-     TIME INDEX (ts),
-     PRIMARY KEY(host)) ENGINE=mito WITH(regions=1);
-   ```
+Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
 
-3. Insert some data:
+## Submitting your solution
 
-   ```SQL
-   INSERT INTO monitor(host, cpu, memory, ts) VALUES ('host1', 66.6, 1024, 1660897955000);
-   INSERT INTO monitor(host, cpu, memory, ts) VALUES ('host2', 77.7, 2048, 1660897956000);
-   INSERT INTO monitor(host, cpu, memory, ts) VALUES ('host3', 88.8, 4096, 1660897957000);
-   ```
+Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
 
-4. Query the data:
+Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
 
-   ```SQL
-   SELECT * FROM monitor;
-   ```
+## Sharing your solution
 
-   ```TEXT
-   +-------+---------------------+------+--------+
-   | host  | ts                  | cpu  | memory |
-   +-------+---------------------+------+--------+
-   | host1 | 2022-08-19 08:32:35 | 66.6 |   1024 |
-   | host2 | 2022-08-19 08:32:36 | 77.7 |   2048 |
-   | host3 | 2022-08-19 08:32:37 | 88.8 |   4096 |
-   +-------+---------------------+------+--------+
-   3 rows in set (0.01 sec)
-   ```
+There are multiple places you can share your solution:
 
-You can always cleanup test database by removing `/tmp/greptimedb`.
+1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
+2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
+3. Share your solution on other social channels like LinkedIn.
+4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-## Resources
+We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
 
-### Installation
+The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
 
-- [Pre-built Binaries](https://github.com/GreptimeTeam/greptimedb/releases):
-  downloadable pre-built binaries for Linux and MacOS
-- [Docker Images](https://hub.docker.com/r/greptime/greptimedb): pre-built
-  Docker images
-- [`gtctl`](https://github.com/GreptimeTeam/gtctl): the command-line tool for
-  Kubernetes deployment
+## Got feedback for us?
 
-### Documentation
+We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
 
-- GreptimeDB [User Guide](https://docs.greptime.com/user-guide/concepts.html)
-- GreptimeDB [Developer
-  Guide](https://docs.greptime.com/developer-guide/overview.html)
+This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
-### SDK
-
-- [GreptimeDB Java
-  Client](https://github.com/GreptimeTeam/greptimedb-client-java)
-
-## Project Status
-
-This project is in its early stage and under heavy development. We move fast and
-break things. Benchmark on development branch may not represent its potential
-performance. We release pre-built binaries constantly for functional
-evaluation. Do not use it in production at the moment.
-
-## Community
-
-Our core team is thrilled too see you participate in any ways you like. When you are stuck, try to
-ask for help by filling an issue with a detailed description of what you were trying to do
-and what went wrong. If you have any questions or if you would like to get involved in our
-community, please check out:
-
-- GreptimeDB Community on [Slack](https://greptime.com/slack)
-- GreptimeDB GitHub [Discussions](https://github.com/GreptimeTeam/greptimedb/discussions)
-- Greptime official [Website](https://greptime.com)
-
-In addition, you may:
-
-- View our official [Blog](https://greptime.com/blogs/index)
-- Connect us with [Linkedin](https://www.linkedin.com/company/greptime/)
-- Follow us on [Twitter](https://twitter.com/greptime)
-
-## License
-
-GreptimeDB uses the [Apache 2.0 license][1] to strike a balance between
-open contributions and allowing you to use the software however you want.
-
-[1]: <https://github.com/greptimeTeam/greptimedb/blob/develop/LICENSE>
-
-## Contributing
-
-Please refer to [contribution guidelines](CONTRIBUTING.md) for more information.
-
-## Acknowledgement
-- GreptimeDB uses [Apache Arrow](https://arrow.apache.org/) as the memory model and [Apache Parquet](https://parquet.apache.org/) as the persistent file format.
-- GreptimeDB's query engine is powered by [Apache Arrow DataFusion](https://github.com/apache/arrow-datafusion).
-- [OpenDAL](https://github.com/datafuselabs/opendal) from [Datafuse Labs](https://github.com/datafuselabs) gives GreptimeDB a very general and elegant data access abstraction layer.
-- GreptimeDB’s meta service is based on [etcd](https://etcd.io/).
-- GreptimeDB uses [RustPython](https://github.com/RustPython/RustPython) for experimental embedded python scripting.
+**Have fun building!** 🚀
